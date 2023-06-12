@@ -6,6 +6,7 @@ const Header = () => {
     <header className="p-3 text-bg-dark">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between">
+          {/* Link는 html의 a태그로, to는 href로 변경됨 */}
           <Link
             href="/"
             className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
@@ -14,6 +15,8 @@ const Header = () => {
           </Link>
           <ul className="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
             <li>
+              {/* NavLink는 a태그로 변환, isactive 있어서 css포커스 적용 */}
+              {/* isActive는 URL을 비교해서 Routes의 path 경로와 같으면 isActive가 true */}
             <NavLink
                 to="/"
                 className={({ isActive }) => {
